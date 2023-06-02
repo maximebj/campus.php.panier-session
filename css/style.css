@@ -53,6 +53,7 @@ body {
 }
 
 .footer {
+    text-align: center;
     color: var(--color-white);
     background: var(--color-grey-800);
     padding: 1rem;
@@ -66,7 +67,7 @@ body {
 
 .product {
     padding: 1rem;
-    border: 1px solid var(--color-grey-500);
+    border: 2px solid var(--color-grey-200);
     border-radius: 6px; 
 }
 

@@ -1,7 +1,7 @@
     </div>  
    
     <footer class="footer">
-        Pied de page
+        Campus Numérique In The Alps 2023
     </footer>
     
 </body>

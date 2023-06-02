@@ -1,4 +1,6 @@
 <?php 
+    $title = "Boutique";
+
     require_once "templates/header.php"; 
     require_once "functions/prices.php";
     require_once "functions/products.php";
@@ -7,7 +9,7 @@
     $products = getProducts();
 ?>
         
-<h1>Tous les produits</h1>
+<h1>Boutique</h1>
 
 <?php if (count($products) > 0): ?>
     <div class="shop">

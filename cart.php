@@ -1,4 +1,6 @@
-<?php 
+<?php
+    $title = "Panier";
+
     require_once "templates/header.php"; 
     require_once "functions/prices.php";
     require_once "functions/cart.php";
