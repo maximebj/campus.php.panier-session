@@ -6,21 +6,21 @@ function getProducts() {
             "title" => "iPad",
             "price" => 45000,
             "description" => "La tablette qui prend la poussière",
-            "image" => "http://localhost:8888/php/img/ipad.jpeg",
+            "image" => "img/ipad.jpeg",
             "stock" => 12,
         ],
         "iphone" => [
             "title" => "iPhone",
             "price" => 100000,
             "description" => "Le téléphone hors de prix",
-            "image" => "http://localhost:8888/php/img/iphone.webp",
+            "image" => "img/iphone.webp",
             "stock" => 50,
         ],
         "macbook" => [
             "title" => "Macbook Pro",
             "price" => 240000,
             "description" => "L'ordinateur du turfu",
-            "image" => "http://localhost:8888/php/img/macbook.jpeg",
+            "image" => "img/macbook.jpeg",
             "stock" => 0,
         ]
     ];
