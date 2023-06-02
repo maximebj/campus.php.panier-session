@@ -1,10 +1,8 @@
 <?php 
-    session_start();
-
-    include_once "templates/header.php"; 
-    include_once "functions/prices.php";
-    include_once "functions/cart.php";
-    include_once "functions/alert.php";
+    require_once "templates/header.php"; 
+    require_once "functions/prices.php";
+    require_once "functions/cart.php";
+    require_once "functions/alert.php";
 
     // On vérifie si un élément a été ajouté au panier
     // Maintenant qu'on a une session, on peut consulter le panier à tout moment sans forcément ajouter/supprimer un élément 

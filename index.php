@@ -1,8 +1,8 @@
 <?php 
-    include_once "templates/header.php"; 
-    include_once "functions/prices.php";
-    include_once "functions/products.php";
-    include_once "functions/alert.php";
+    require_once "templates/header.php"; 
+    require_once "functions/prices.php";
+    require_once "functions/products.php";
+    require_once "functions/alert.php";
 
     $products = getProducts();
 ?>
