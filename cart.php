@@ -1,7 +1,6 @@
 <?php
-    $title = "Panier";
+    session_start();
 
-    require_once "templates/header.php"; 
     require_once "functions/prices.php";
     require_once "functions/cart.php";
     require_once "functions/alert.php";
@@ -34,6 +33,9 @@
     // On calcule le total
     $total = getCartTotal($cart);
 
+    // On commence l'affichage du HTML
+    $title = "Panier";
+    require_once "templates/header.php"; 
 ?>
         
 <h1>Panier</h1>

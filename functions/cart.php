@@ -1,6 +1,6 @@
 <?php 
 
-include "functions/products.php";
+require_once "functions/products.php";
 
 function addToCart($productKey, $quantity) {
     
@@ -26,7 +26,7 @@ function addToCart($productKey, $quantity) {
 
 function getCart() {
     $cartSession = $_SESSION['cart'] ?? [];
-
+    
     // Equivaut à 
     // $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
 
@@ -43,7 +43,7 @@ function getCart() {
         
         $product = getProduct($productKey);
 
-        $cart[$productKey] = [
+        $cart[] = [
             'id'        => $productKey,
             'title'     => $product['title'],
             'stock'     => $product['stock'],
@@ -75,7 +75,7 @@ function getCartItems() {
 }
 
 function updateCart($productKeys, $quantities) {
-    for($i = 0; $i< count($productKeys); $i++) {
+    for($i = 0; $i < count($productKeys); $i++) {
 
         $productKey = $productKeys[$i];
         $product = getProduct($productKey);

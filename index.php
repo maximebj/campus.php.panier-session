@@ -1,12 +1,15 @@
 <?php 
-    $title = "Boutique";
-
-    require_once "templates/header.php"; 
+    session_start();
+    
     require_once "functions/prices.php";
     require_once "functions/products.php";
     require_once "functions/alert.php";
 
     $products = getProducts();
+
+    // On commence l'affichage du HTML
+    $title = "Boutique";
+    require_once "templates/header.php";
 ?>
         
 <h1>Boutique</h1>
