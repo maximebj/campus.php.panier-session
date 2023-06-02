@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-grey-200: #e2e8f0;
+    --color-grey-500: #64748b;
+    --color-grey-800: #1e293b;
+    --color-grey-900: #0f172a;
+    --color-white: #fff;
+
+    --color-brand-300: #7dd3fc;
+    --color-brand-500: #38bdf8;
+
+    --font-base: 'Geologica', sans-serif;
+    --font-size: 18px;
+
+    font-size: var(--font-size);
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-base);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    background: var(--color-grey-800);
+    padding: 1rem;
+    color: white;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.header nav a + a {
+    margin-left: 1rem;
+}
+
+.page {
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.footer {
+    background: var(--color-grey-800);
+    padding: 1rem;
+    color: white;
+}
+
+.shop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.product {
+    padding: 1rem;
+    border: 1px solid var(--color-grey-500);
+    border-radius: 6px; 
+}
+
+.product img {
+    aspect-ratio: 16/9;
+    object-fit: contain;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead {
+    background: var(--color-grey-900);
+    color: var(--color-white);
+}
+
+table td,
+table th {
+    padding: 1rem;
+}
+
+table tbody tr:nth-child(even) {
+    background: var(--color-grey-200);
+}
+
+table tbody td:not(:first-child) {
+    text-align: right;
+}
+
+table tfoot {
+    border-top: 2px solid var(--color-grey-200);
+}
+
+table tfoot td {
+    text-align: right;
+}
+
+table tfoot td:not(:first-child) {
+    font-weight: bold;
+    background: var(--color-grey-200);
+}
+
+input[type="number"] {
+    width: 4rem;
+    padding: 0.8rem;
+    border: 1px solid var(--color-grey-500);
+    border-radius: 6px;
+}
+
+button {
+    font-family: var(--font-base);
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+button:not(:disabled) {
+    background: var(--color-brand-500);
+}
+
+button:disabled {
+    background: var(--color-brand-300);
+}
