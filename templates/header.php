@@ -1,5 +1,7 @@
 <?php 
-    include_once "functions/cart.php";
+    session_start();
+
+    require_once "functions/cart.php";
 
     $cartCount = getCartItems();
 ?>
@@ -9,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Document</title>
+    <title>Pomme Store</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +22,9 @@
 <body>
 
     <header class="header">
-        <a href="index.php">Ma boutique</a>
+        <a href="index.php">Pomme Store</a>
         <nav>
-            <a href="index.php">Accueil</a>
+            <a href="index.php">Produits</a>
             <a href="cart.php">Mon Panier (<?php echo $cartCount ?> items)</a>
         </nav>
     </header>
