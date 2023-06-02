@@ -1,3 +1,8 @@
+<?php 
+    include_once "functions/cart.php";
+
+    $cartCount = getCartItems();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +23,7 @@
         <a href="index.php">Ma boutique</a>
         <nav>
             <a href="index.php">Accueil</a>
-            <a href="cart.php">Panier</a>
+            <a href="cart.php">Mon Panier (<?php echo $cartCount ?> items)</a>
         </nav>
     </header>
 

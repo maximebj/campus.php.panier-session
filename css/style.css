@@ -12,6 +12,9 @@
     --color-brand-300: #7dd3fc;
     --color-brand-500: #38bdf8;
 
+    --color-error: #dc2626;
+    --color-success: #65a30d;
+
     --font-base: 'Geologica', sans-serif;
     --font-size: 18px;
 
@@ -32,11 +35,11 @@ body {
     justify-content: space-between; 
     background: var(--color-grey-800);
     padding: 1rem;
-    color: white;
+    color: var(--color-white);
 }
 
 .header a {
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
 }
 
@@ -50,9 +53,9 @@ body {
 }
 
 .footer {
+    color: var(--color-white);
     background: var(--color-grey-800);
     padding: 1rem;
-    color: white;
 }
 
 .shop {
@@ -88,7 +91,7 @@ table th {
 }
 
 table tbody tr:nth-child(even) {
-    background: var(--color-grey-200);
+    border-top: 2px solid var(--color-grey-200);
 }
 
 table tbody td:not(:first-child) {
@@ -120,7 +123,7 @@ button {
     padding: 0.8rem;
     border: none;
     border-radius: 6px;
-    color: white;
+    color: var(--color-white);
     cursor: pointer;
 }
 
@@ -130,4 +133,43 @@ button:not(:disabled) {
 
 button:disabled {
     background: var(--color-brand-300);
+}
+
+.delete {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 100px;
+    color: var(--color-white);
+    text-decoration: none;
+    background: var(--color-error);
+}
+
+.alert {
+    border-radius: 4px;
+    padding: 1rem;
+    color: var(--color-white);
+}
+
+.alert a {
+    color: var(--color-white);
+}
+
+.alert.error {
+    background-color: var(--color-error);
+}
+
+.alert.success {
+    background-color: var(--color-success);
+}
+
+.back {
+    margin: 2rem 0;
+}
+
+.back a {
+    color: var(--color-brand-500);
+    text-decoration: none;
 }

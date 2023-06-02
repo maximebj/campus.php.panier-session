@@ -1,7 +1,8 @@
 <?php 
-    include "templates/header.php"; 
-    include "functions/prices.php";
-    include "functions/products.php";
+    include_once "templates/header.php"; 
+    include_once "functions/prices.php";
+    include_once "functions/products.php";
+    include_once "functions/alert.php";
 
     $products = getProducts();
 ?>
@@ -18,10 +19,11 @@
                 <p><?php echo $product['description'] ?></p>
                 
                 <form action="cart.php" method="post">
+                    <input type="hidden" name="action" value="add">
                     <input type="hidden" name="product" value="<?php echo $productKey ?>">
-                    <input type="number" name="quantity" value="1" min="1">
+                    <input type="number" name="quantity" value="1" min="1" max="<?php echo $product['stock']; ?>">
                     
-                    <?php if ($product["available"]): ?>
+                    <?php if ($product["stock"] > 0): ?>
                         <button>Ajouter au panier</button>
                     <?php else: ?>
                         <button disabled>Produit indisponible</button>
